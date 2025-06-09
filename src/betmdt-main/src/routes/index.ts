@@ -1,0 +1,28 @@
+import express from "express";
+import authRoutes from "./auth.routes";
+import catergoryRoutes from "./category.routes";
+import productRoutes from "./product.routes";
+import orderRoutes from "./order.routes";
+import userRoutes from "./user.routes";
+import cartRouter from "./cart.routes";
+import stockRoutes from "./stock.routes";
+import uploadRoutes from "./upload.routes";
+import transactionRoutes from "./transaction.routes";
+import roleRoutes from "./role.routes";
+import dashboardRoutes from "./dashboard.routes";
+import paymentRoutes from "./payment.routes";
+const router = express.Router();
+router.use("/auth", authRoutes);
+router.use("/categories", catergoryRoutes);
+router.use("/products", productRoutes);
+router.use("/orders", orderRoutes);
+router.use("/users", userRoutes);
+router.use("/cart", cartRouter);
+router.use("/stock", stockRoutes);
+router.use("/upload", uploadRoutes);
+router.use("/transactions", transactionRoutes);
+router.use("/roles", roleRoutes);
+router.use("/dashboard", dashboardRoutes);
+router.use("/payment", paymentRoutes);
+// Add more routes as needed
+export default router;
